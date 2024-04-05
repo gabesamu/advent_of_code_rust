@@ -43,7 +43,6 @@ fn part1(data: &[u8]) -> u32 {
         .sum::<u32>();
 }
 
-
 fn part2(data: &[u8]) -> u32 {
     let width = (data.iter().position(|&c| c == b'\n').unwrap() + 1) as isize;
 
@@ -56,10 +55,12 @@ fn part2(data: &[u8]) -> u32 {
                 .chain([-1, 1])
                 .chain(width - 1..width + 2)
                 .for_each(|j| {
-                    if data.get((i as isize + j) as usize).map_or_else(|| false, |&c| c.is_ascii_digit()) {
+                    if data
+                        .get((i as isize + j) as usize)
+                        .map_or_else(|| false, |&c| c.is_ascii_digit())
+                    {
                         let (num, start) = get_num(data, (i as isize + j) as usize);
                         nums.push((num, start));
-
                     }
                 });
 
@@ -68,11 +69,9 @@ fn part2(data: &[u8]) -> u32 {
                 return nums[0].0 * nums[1].0;
             }
             return 0;
-        }).sum();
-
+        })
+        .sum();
 }
-
-
 
 fn get_num(data: &[u8], i: usize) -> (u32, usize) {
     let mut num = 0;
