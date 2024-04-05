@@ -58,12 +58,12 @@ fn part2(data: &[u8]) -> u32 {
                 .for_each(|j| {
                     if data.get((i as isize + j) as usize).map_or_else(|| false, |&c| c.is_ascii_digit()) {
                         let (num, start) = get_num(data, (i as isize + j) as usize);
-                        if !nums.iter().any(|(_, s)| *s == start){
-                            nums.push((num, start));
-                        }
+                        nums.push((num, start));
+
                     }
                 });
 
+            nums.dedup();
             if nums.len() == 2 {
                 return nums[0].0 * nums[1].0;
             }
