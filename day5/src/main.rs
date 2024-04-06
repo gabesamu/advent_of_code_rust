@@ -1,4 +1,4 @@
-fn main() {
+pub fn main() {
     let data = include_str!("../input.txt");
     println!("Day 5:");
     println!("Part 1: {}", part1(data));
