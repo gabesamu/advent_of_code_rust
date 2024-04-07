@@ -64,6 +64,7 @@ fn part2(data: &str) -> u64 {
                     (range_data[1]..range_data[1] + range_data[2], range_data[0])
                 })
                 .collect::<Vec<_>>();
+            // sorting here allows us to loop through each map only once and guarantees the range was fully mapped
             map.sort_by_key(|(range, _)| range.start);
             map
         })
