@@ -34,7 +34,7 @@ fn jobs() -> Vec<(&'static str, fn())> {
         ("day3", day3::main),
         ("day4", day4::main),
         ("day5", day5::main),
-        // ("day6", day6::main),
+        ("day6", day6::main),
         // ("day7", day7::main),
         // ("day8", day8::main),
         // ("day9", day9::main),
