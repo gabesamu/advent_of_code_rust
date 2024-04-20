@@ -74,6 +74,7 @@ fn part2(data: &str) -> u32 {
         .unwrap();
 
 
+    // full iteration is too slow, using binary search to find the start and end of the winning range
     let mid = time / 2;
 
     let mut l = 0;
