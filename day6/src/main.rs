@@ -5,6 +5,12 @@ pub fn main() {
     println!("Part 2: {}", part2(data));
 }
 
+pub fn speed_test() {
+    let data = include_str!("../input.txt");
+    part1(data);
+    part2(data);
+}
+
 fn part1(data: &str) -> u32 {
     let times = data.lines()
         .next()

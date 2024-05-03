@@ -5,6 +5,12 @@ pub fn main() {
     println!("Part 2: {}", part2(data));
 }
 
+pub fn speed_test() {
+    let data = include_bytes!("../input.txt");
+    part1(data);
+    part2(data);
+}
+
 fn part1(data: &[u8]) -> u32 {
     let width = (data.iter().position(|&c| c == b'\n').unwrap() + 1) as isize;
 

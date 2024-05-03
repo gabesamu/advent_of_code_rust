@@ -29,13 +29,13 @@ fn main() {
 
 fn jobs() -> Vec<(&'static str, fn())> {
     vec![
-        ("day1", day1::main),
-        ("day2", day2::main),
-        ("day3", day3::main),
-        ("day4", day4::main),
-        ("day5", day5::main),
-        ("day6", day6::main),
-        ("day7", day7::main),
+        ("day1", day1::speed_test),
+        ("day2", day2::speed_test),
+        ("day3", day3::speed_test),
+        ("day4", day4::speed_test),
+        ("day5", day5::speed_test),
+        ("day6", day6::speed_test),
+        ("day7", day7::speed_test),
         // ("day8", day8::main),
         // ("day9", day9::main),
         // ("day10", day10::main),

@@ -8,6 +8,12 @@ pub fn main() {
     println!("Part 2: {}", part2(data));
 }
 
+pub fn speed_test() {
+    let data = include_str!("../input.txt");
+    part1(data);
+    part2(data);
+}
+
 fn part1(data: &str) -> u64 {
     let mut map_lines = data.lines().skip(2);
     let maps: Vec<Vec<(std::ops::Range<u64>, u64)>> = (0..7)
